@@ -14,7 +14,7 @@ public class App
     
     	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
     	Person person = (Person)applicationContext.getBean("person");
-    	System.out.println("First Name: "+person.getFirstName()+", Last Name:"+person.getLastName());
+    	System.out.println("First Name: "+person.getFirstName()+", Last Name:"+person.getLastName()+", Date of Birth"+person.getDateOfBirth());
     	
     	Person personBean = (Person)applicationContext.getBean("personBean");
     	System.out.println(personBean.getPersonList().size());

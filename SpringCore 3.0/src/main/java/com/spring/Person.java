@@ -1,5 +1,6 @@
 package com.spring;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -7,9 +8,10 @@ import java.util.Set;
 
 public class Person {
 	
-	public Person (String firstName, String lastName){
+	public Person (String firstName, String lastName, Date dateOfBirth){
 		this.firstName=firstName;
-		this.lastName=lastName;		
+		this.lastName=lastName;
+		this.dateOfBirth = dateOfBirth;
 	}
 	
 	public Person(){
@@ -18,6 +20,7 @@ public class Person {
 
 	private String firstName;
 	private String lastName;
+	private Date dateOfBirth;
 	private List<Person> personList;
 	private Set<Person> personSet;
 	private Map<String, Person> personMap;
@@ -69,6 +72,14 @@ public class Person {
 	
 	public void setLastName(String lasttName) {
 		lastName = lasttName;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 	
 }

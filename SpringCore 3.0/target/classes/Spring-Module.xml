@@ -6,11 +6,22 @@
 	<bean id="person" class="com.spring.Person">
 		<constructor-arg index="0" value="Eswar"/>
 		<constructor-arg index="1" value="Karumuri"/>
+		<constructor-arg index="2">
+			<bean factory-bean="datOfBirth" factory-method="parse" >
+				<constructor-arg value="1987-06-18"/>
+			</bean>
+		
+		</constructor-arg>
 		
 		<!-- <property name="firstName" value="Eswar" />
 			 <property name="lastName"  value="Karumuri" /> -->
 			
 	</bean>
+ 
+ 	<bean id="datOfBirth" class="java.text.SimpleDateFormat">
+ 		<constructor-arg value="yyyy-MM-dd"/>
+ 	</bean>
+ 
  
  	<bean id="personBean" class="com.spring.Person">
  		<property name="personList">
@@ -32,8 +43,8 @@
  		</property>
  		
  		<property name="properties">
- 			<props>
-				<prop key="email">helloeeswar@gmail.com</prop> 			
+ 			<props >
+				<prop key="firstName"></prop> 			
  			</props>
  		</property>
  	
