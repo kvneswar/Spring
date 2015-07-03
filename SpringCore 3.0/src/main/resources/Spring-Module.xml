@@ -3,8 +3,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
+ <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	 <property name="location">
+	 	<value>App.properties</value>
+	 </property>
+ </bean>
+  
 	<bean id="person" class="com.spring.Person">
-		<constructor-arg index="0" value="Eswar"/>
+		<constructor-arg index="0" value="${firstName}"/>
 		<constructor-arg index="1" value="Karumuri"/>
 		<constructor-arg index="2">
 			<bean factory-bean="datOfBirth" factory-method="parse" >
