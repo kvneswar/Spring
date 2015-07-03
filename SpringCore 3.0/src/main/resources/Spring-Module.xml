@@ -4,8 +4,13 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
 	<bean id="person" class="com.spring.Person">
-		<property name="firstName" value="Eswar" />
-		<property name="lastName" value="Karumuri" />
+		<constructor-arg index="0" value="Eswar"/>
+		<constructor-arg index="1" value="Karumuri"/>
+		
+		<!-- 
+			<property name="firstName" value="Eswar" />
+			<property name="lastName" value="Karumuri" /> 
+		-->
 	</bean>
  
 </beans>

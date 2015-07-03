@@ -1,6 +1,11 @@
 package com.spring;
 
 public class Person {
+	
+	public Person (String firstName, String lastName){
+		this.firstName=firstName;
+		this.LastName=lastName;		
+	}
 
 	private String firstName;
 	private String LastName;
