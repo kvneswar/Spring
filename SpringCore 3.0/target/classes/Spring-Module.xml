@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
-	<bean id="person" class="com.spring.Person" >
-		<constructor-arg ref="firstName"/>
+	<bean id="person" class="com.spring.Person">
+		<constructor-arg index="0" value="Eswar"/>
 		<constructor-arg index="1" value="Karumuri"/>
 		
 		<!-- <property name="firstName" value="Eswar" />
@@ -12,8 +12,38 @@
 			
 	</bean>
  
- 	<bean id="firstName" class="java.lang.String">
- 		<constructor-arg value="Eswar"/>
+ 	<bean id="personBean" class="com.spring.Person">
+ 		<property name="personList">
+			<list>
+				<ref bean="person"/>
+ 			</list>
+ 		</property>
+ 		
+ 		<property name="personSet">
+ 			<set>
+ 				<ref bean="person"/>
+ 			</set>
+ 		</property>
+ 		
+ 		<property name="personMap">
+ 			<map>
+ 				<entry key="person" value-ref="person"/>
+ 			</map>
+ 		</property>
+ 		
+ 		<property name="properties">
+ 			<props>
+				<prop key="email">helloeeswar@gmail.com</prop> 			
+ 			</props>
+ 		</property>
+ 	
  	</bean>
+ 
+ 
+ 
+ 
+ 	<!-- <bean id="firstName" class="java.lang.String">
+ 		 	<constructor-arg value="Eswar"/>
+ 		 </bean> -->
  
 </beans>
