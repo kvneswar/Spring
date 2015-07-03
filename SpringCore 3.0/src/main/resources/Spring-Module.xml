@@ -4,7 +4,7 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
 	<bean id="person" class="com.spring.Person">
-		<constructor-arg index="0" value="Eswar"/>
+		<constructor-arg ref="firstName"/>
 		<constructor-arg index="1" value="Karumuri"/>
 		
 		<!-- 
@@ -12,5 +12,9 @@
 			<property name="lastName" value="Karumuri" /> 
 		-->
 	</bean>
+ 
+ 	<bean id="firstName" class="java.lang.String">
+ 		<constructor-arg value="Eswar"/>
+ 	</bean>
  
 </beans>
