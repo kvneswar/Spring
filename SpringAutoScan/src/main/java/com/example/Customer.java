@@ -11,6 +11,13 @@ public class Customer {
 	@Autowired
 	private CustomerDAO customerDAO;
 	
+	@Autowired
+	private PaymentDAO paymentDAO;
+	
+	public PaymentDAO getPaymentDAO() {
+		return paymentDAO;
+	}
+
 	public CustomerDAO getCustomerDAO() {
 		return customerDAO;
 	}

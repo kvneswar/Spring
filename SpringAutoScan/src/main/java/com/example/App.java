@@ -13,7 +13,7 @@ public class App
     	
     	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
     	Customer customer = (Customer)applicationContext.getBean("customerAlias");
-    	System.out.println(customer + ", "+ customer.getCustomerDAO());
+    	System.out.println(customer + ", "+ customer.getCustomerDAO() + ", "+ customer.getPaymentDAO());
     	
     
     }
