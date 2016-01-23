@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="Spring-Config-Address.xml"/>
+	<import resource="other/Spring-Config-Address.xml"/>   <!-- /other/Spring-Config-Address.xml also OKAY, leading slash is ignored.-->
 
 	<bean id="person" class="org.example.beaninstatiation.Person">
 		<property name="name" value="John Nash" />
