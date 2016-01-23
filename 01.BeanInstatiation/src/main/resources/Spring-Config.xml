@@ -26,8 +26,7 @@
 		</property>
 	</bean>
 
-	<bean id="nonStaticFactoryInstantiation" class="org.example.beaninstatiation.Person"
-		factory-bean="person" factory-method="instantiateMeInNonStaticWay">
+	<bean id="nonStaticFactoryInstantiation" factory-bean="person" factory-method="instantiateMeInNonStaticWay">
 		<property name="name" value="Eric Balfour" />
 		<property name="age" value="38" />
 		<property name="address">
