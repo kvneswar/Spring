@@ -4,17 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<import resource="Spring-Config-Address.xml"/>
+
 	<bean id="person" class="org.example.beaninstatiation.Person">
 		<property name="name" value="John Nash" />
 		<property name="age" value="78" />
-		<property name="address">
-			<bean name="innerBean" class="org.example.beaninstatiation.Person$Address">
-				<property name="addressLine1" value="10899 Wilshire Blvd" />
-				<property name="city" value="Los Angeles" />
-				<property name="state" value="LA" />
-				<property name="zipCode" value="90024" />
-			</bean>
-		</property>
+		<property name="address" ref="addressBean"/>
 	</bean>
 
 	<bean id="staticFactoryInstatiation" class="org.example.beaninstatiation.Person"

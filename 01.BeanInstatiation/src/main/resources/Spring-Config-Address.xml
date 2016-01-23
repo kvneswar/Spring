@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean name="addressBean" class="org.example.beaninstatiation.Person$Address">
+				<property name="addressLine1" value="10899 Wilshire Blvd" />
+				<property name="city" value="Los Angeles" />
+				<property name="state" value="LA" />
+				<property name="zipCode" value="90024" />
+			</bean>
+</beans>
