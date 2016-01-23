@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="org.example.beaninstatiation.Person">
+		<property name="name" value="John Nash" />
+		<property name="age" value="78" />
+		<property name="address">
+			<bean name="innerBean" class="org.example.beaninstatiation.Person$Address">
+				<property name="addressLine1" value="10899 Wilshire Blvd" />
+				<property name="city" value="Los Angeles" />
+				<property name="state" value="LA" />
+				<property name="zipCode" value="90024" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="staticFactoryInstatiation" class="org.example.beaninstatiation.Person"
+		factory-method="instantiateMe">
+		<property name="name" value="Smith Thompson" />
+		<property name="age" value="42" />
+		<property name="address">
+			<bean name="innerBean" class="org.example.beaninstatiation.Person$Address">
+				<property name="addressLine1" value="5905 Wilshire Blvd" />
+				<property name="city" value="Los Angeles" />
+				<property name="state" value="LA" />
+				<property name="zipCode" value="90036" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="nonStaticFactoryInstantiation" class="org.example.beaninstatiation.Person"
+		factory-bean="person" factory-method="instantiateMeInNonStaticWay">
+		<property name="name" value="Eric Balfour" />
+		<property name="age" value="38" />
+		<property name="address">
+			<bean name="innerBean" class="org.example.beaninstatiation.Person$Address">
+				<property name="addressLine1" value="210 E Olympic Blvd" />
+				<property name="city" value="Los Angeles" />
+				<property name="state" value="LA" />
+				<property name="zipCode" value="90015" />
+			</bean>
+		</property>
+	</bean>
+
+</beans>
