@@ -7,8 +7,10 @@
 
 	<bean id="person" class="org.example.Person" c:name="Nancy" c:address-ref="address">
 		<constructor-arg name="age" value="24"/>
-		
 	</bean>
+	
+	<!-- c-namespace index declaration -->
+	<!--  <bean id="foo" class="x.y.Foo" c:_0-ref="bar" c:_1-ref="baz"/> -->
 	
 	<bean id="address" class="org.example.Address">
 		<property name="addressLine1" value="addressLine1"/>
