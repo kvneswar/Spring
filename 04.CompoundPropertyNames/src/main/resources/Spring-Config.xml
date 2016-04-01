@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="org.example.Person">
+		<property name="name" value="Nancy"/>
+		<property name="age" value="24"/>
+		
+		<property name="address.addressLine1" value="addressLine1"/>
+		<property name="address.addressLine2" value="addressLine2"/>
+		<property name="address.city" value="city"/>
+		<property name="address.state" value="state"/>
+		<property name="address.zip" value="zip"/>
+		
+		<!-- If the address object is not null then we can access that object. -->
+	</bean>
+	
+	<!-- 
+		c name space enables you to use the bean element's attributes instead of <constructor-arg/> elements.
+		-ref is to refer other bean elements.
+	-->
+
+</beans>
