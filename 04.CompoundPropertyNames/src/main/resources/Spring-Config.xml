@@ -18,9 +18,4 @@
 		<!-- If the address object is not null then we can access that object. -->
 	</bean>
 	
-	<!-- 
-		c name space enables you to use the bean element's attributes instead of <constructor-arg/> elements.
-		-ref is to refer other bean elements.
-	-->
-
 </beans>
