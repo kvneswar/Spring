@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="org.example.Person" depends-on="dataInitializer">
+		<property name="name" value="Nancy"/>
+		<property name="age" value="24"/>
+	</bean>
+	
+	<bean id="dataInitializer" class="org.example.DataInitializer" 
+					factory-method="initializeMeFirst"/>
+					
+	<!-- 
+		1) ref element is used to set the reference of other bean.
+		2) dependsOn can be used to force one or more beans to be initialized.
+	-->				
+	
+</beans>
