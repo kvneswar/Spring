@@ -15,7 +15,7 @@
 					
 	<!-- 
 		1) ref element is used to set the reference of other bean.
-		2) dependsOn can be used to force one or more beans to be initialized.
+		2) dependsOn can be used to force one or more beans to be initialized. E.g: Static initializer.
 	-->				
 	
 </beans>
