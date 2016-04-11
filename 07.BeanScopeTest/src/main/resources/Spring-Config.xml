@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="singletonPerson" class="org.example.Person">
+		<property name="name" value="Nancy" />
+		<property name="age" value="24" />
+		<property name="address">
+			<bean id="address" class="org.example.Address">
+				<property name="addressLine1" value="addressLine11" />
+				<property name="addressLine2" value="addressLine2" />
+				<property name="city" value="city" />
+				<property name="state" value="state" />
+				<property name="zip" value="zip" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="prototypePerson" class="org.example.Person" scope="prototype">
+		<property name="name" value="Nancy" />
+		<property name="age" value="24" />
+		<property name="address">
+			<bean id="address" class="org.example.Address">
+				<property name="addressLine1" value="addressLine11" />
+				<property name="addressLine2" value="addressLine2" />
+				<property name="city" value="city" />
+				<property name="state" value="state" />
+				<property name="zip" value="zip" />
+			</bean>
+		</property>
+	</bean>
+</beans>
